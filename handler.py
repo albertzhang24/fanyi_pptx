@@ -7,10 +7,12 @@ import sys, hashlib, random, json, string
 #from pathlib import Path
 
 
-libraries = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)), 'libs')
-# sys.path.append(os.path.join(libraries, "../"))
-sys.path.append(libraries)
+# libraries = os.path.join(
+#     os.path.dirname(os.path.realpath(__file__)), 'libs')
+# sys.path.append(libraries)
+
+here = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.join(here, "../libs"))
 
 # from flask import Flask, flash, request, render_template, redirect, url_for, send_from_directory
 from pptx import Presentation
