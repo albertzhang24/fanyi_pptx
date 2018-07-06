@@ -19,7 +19,7 @@ service: sls-translate # NOTE: update this with your service name
 
 provider:
   name: aws
-  runtime: python3.6
+  runtime: python2.7
   stage: dev
   region: us-west-1
 
@@ -77,11 +77,6 @@ functions:
       - http:
           path: uploaded/post
           method: post
-
-  
-
-# plugins: 
-#   - serverless-python-requirements
 
 
 #    The following are a few example events you can configure

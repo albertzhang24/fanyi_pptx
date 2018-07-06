@@ -1,0 +1,4 @@
+libs/*
+*.pyc
+
+*.DS_Store

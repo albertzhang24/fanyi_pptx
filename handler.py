@@ -1,20 +1,29 @@
 import json
-__author__ = 'albertzhang'
+import sys, os
+from hashlib import md5
+import sys, hashlib, random, json, string
+#import http.client
+#import urllib.request, urllib.parse, urllib.error
+#from pathlib import Path
 
-import os
+
+libraries = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), 'libs')
+# sys.path.append(os.path.join(libraries, "../"))
+sys.path.append(libraries)
+
+
 from flask import Flask, flash, request, render_template, redirect, url_for, send_from_directory
+from pptx import Presentation
 from werkzeug.utils import secure_filename
 
-from pptx import Presentation
-import sys, http.client, hashlib, random, json, string
-from hashlib import md5
-import urllib.request, urllib.parse, urllib.error
-from pathlib import Path
+__author__ = 'albertzhang'
+
+
 appid = '20180531000169614'
 secretKey = 'IRP4F_z0fxRscAU5aMt_'
 httpClient = None
 salt = random.randint(32768, 65536)
-httpClient = http.client.HTTPConnection('api.fanyi.baidu.com')
 count = 0
 
 UPLOAD_FOLDER = 'uploads/'
@@ -23,8 +32,8 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def hello(event, context):
-    event_method = event.get("path")
-    print(event_method)
+    # event_method = event.get("path")
+    print(event['name']['poop'])
     return dict(
         statusCode=200,
         body="hello"
@@ -38,7 +47,7 @@ def hello(event, context):
         "event": event
     }
     """
-    
+
 def upload_file(event, context):
     print("event method name" ,event.get("httpMethod"))
     if event.get("httpMethod") == 'POST':
@@ -54,6 +63,7 @@ def uploaded_file(filename, event, context):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 def translate_powerpoint(input_filename, file):
+    httpClient = http.client.HTTPConnection('api.fanyi.baidu.com')
     source_target = request.form['source_target']
     if source_target[:source_target.find("_")] == 'en':
         sourceLang = 'en'
