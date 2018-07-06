@@ -53,18 +53,15 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  home:
+    handler: handler.home
     events:
       - http:
-          path: users/get
+          path: /
           method: get
   upload_file:
     handler: handler.upload_file
     events:
-      - http:
-          path: upload/get
-          method: get
       - http:
           path: upload/post
           method: post
@@ -74,9 +71,6 @@ functions:
       - http:
           path: uploaded/get
           method: get
-      - http:
-          path: uploaded/post
-          method: post
 
 
 #    The following are a few example events you can configure

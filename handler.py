@@ -12,8 +12,7 @@ libraries = os.path.join(
 # sys.path.append(os.path.join(libraries, "../"))
 sys.path.append(libraries)
 
-
-from flask import Flask, flash, request, render_template, redirect, url_for, send_from_directory
+# from flask import Flask, flash, request, render_template, redirect, url_for, send_from_directory
 from pptx import Presentation
 from werkzeug.utils import secure_filename
 
@@ -28,25 +27,24 @@ count = 0
 
 UPLOAD_FOLDER = 'uploads/'
 
-app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# app = Flask(__name__)
+# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-def hello(event, context):
-    # event_method = event.get("path")
-    print(event['name']['poop'])
-    return dict(
-        statusCode=200,
-        body="hello"
-    )
 
-    # Use this code if you don't use the http event with the LAMBDA-PROXY
-    # integration
-    """
+def home(event, context):
+    index_content = ''
+    # Get index file and show to user.
+    with open('templates/index.html', 'r') as index_file:
+        index_content = index_file.read()
+
     return {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "event": event
+        'statusCode': 200,
+        'headers': {
+            'Content-Type': 'text/html',
+        },
+        'body': index_content
     }
-    """
+
 
 def upload_file(event, context):
     print("event method name" ,event.get("httpMethod"))
