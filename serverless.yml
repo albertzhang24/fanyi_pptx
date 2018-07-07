@@ -44,18 +44,18 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-package:
- include:
-   - handler.py
-   - libs/**
-   - templates/**
-   - uploads/**
- exclude:
-   - requirements.txt
-   - README.txt
-   - .gitignore
-   - run.sh
-   - serverless.yml
+# package:
+#  include:
+#    - handler.py
+#    - templates/**
+#    - uploads/**
+#  exclude:
+#    - requirements.txt
+#    - README.txt
+#    - .gitignore
+#    - run.sh
+#    - serverless.yml
+#    - libs/**
 
 functions:
   home:
@@ -76,6 +76,14 @@ functions:
       - http:
           path: uploaded/get
           method: get
+
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
 
 
 #    The following are a few example events you can configure
