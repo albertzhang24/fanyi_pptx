@@ -44,25 +44,27 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-# package:
 #  include:
 #    - handler.py
 #    - templates/**
 #    - uploads/**
-#  exclude:
-#    - requirements.txt
-#    - README.txt
-#    - .gitignore
-#    - run.sh
-#    - serverless.yml
-#    - libs/**
+
+package:
+ exclude:
+   - requirements.txt
+   - README.txt
+   - .gitignore
+   - run.sh
+   - serverless.yml
+   - node_modules/**
+   - package-lock.json
 
 functions:
   home:
     handler: handler.home
     events:
       - http:
-          path: /
+          path: home
           method: get
   upload_file:
     handler: handler.upload_file

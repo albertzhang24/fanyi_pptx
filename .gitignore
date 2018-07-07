@@ -1,4 +1,3 @@
-libs/*
 *.DS_Store
 .Python
 *.pyc
@@ -19,4 +18,6 @@ var/
 *.egg
 # Serverless directories
 .serverless
+node_modules/*
+package-lock.json
 
