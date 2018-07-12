@@ -15,8 +15,8 @@ here = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.join(here, "./libs"))
 
 # from flask import Flask, flash, request, render_template, redirect, url_for, send_from_directory
-from pptx import Presentation
-from werkzeug.utils import secure_filename
+# from pptx import Presentation
+# from werkzeug.utils import secure_filename
 
 __author__ = 'albertzhang'
 
@@ -47,19 +47,40 @@ def home(event, context):
         'body': index_content
     }
 
+#put file in S3 pptx bucket
+def get_file(event, context):
+    e = json.dumps(event)
+    print(e)
+    print('Body', event.body)
+    print('Headers:', event.headers)
+    print('Method', event.method)
+    print("Parameters", event.params)
+    print('Query: ', event['query'].get('message').encode('utf-8'))
+    # j = json.loads(event.body)
+    # file = j['file']
+    return {
+        'statusCode': 200,
+        'headers' : {
+            'Content-Type': 'multipart/form-data',
+        }
+     }
 
-def upload_file(event, context):
-    print("event method name" ,event.get("httpMethod"))
-    if event.get("httpMethod") == 'POST':
-        file = request.files['file']
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        translated_filename = secure_filename(translate_powerpoint(filename, file))
-        return redirect(url_for('uploaded_file',
-                                filename=translated_filename))
-    return render_template('index.html')
+def upload_file_S3(event, context):
+    file = request.files['file']
+    filename = secure_filename(file.filename)
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    #save onto bucket 
+
+    translated_filename = secure_filename(translate_powerpoint(filename, file))
+
+    return redirect(url_for('uploaded_file',
+                            filename=translated_filename))
 
 def uploaded_file(filename, event, context):
+    return {
+        'statusCode' : 302,
+
+    }
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 def translate_powerpoint(input_filename, file):

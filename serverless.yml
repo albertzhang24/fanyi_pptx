@@ -17,6 +17,9 @@ service: sls-translate # NOTE: update this with your service name
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"
 
+custom:
+  bucket: test-http-post
+
 provider:
   name: aws
   runtime: python2.7
@@ -66,11 +69,11 @@ functions:
       - http:
           path: home
           method: get
-  upload_file:
-    handler: handler.upload_file
+  get_file:
+    handler: handler.get_file
     events:
       - http:
-          path: upload/post
+          path: getfile/post
           method: post
   uploaded_file:
     handler: handler.uploaded_file

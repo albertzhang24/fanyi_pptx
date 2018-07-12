@@ -805,28 +805,101 @@
         <h1> <center> Translate your Powerpoints </center> </h1>
         <br>
         <!-- <form action="/upload-target" class="dropzone" method="POST" enctype="multipart/form-data" >  -->
-        <form id="form" method="POST" enctype="multipart/form-data" > 
+        <form action="https://test-http-post.s3.amazonaws.com" id="form" method="POST" enctype="multipart/form-data" > 
             <div class="Translating Powerpoints">   
-                <h4> 
+                <!-- <h4> 
                     <select name="source_target">
                         <option value="en_zh">English to Chinese</option>
                         <option value="zh_en">Chinese to English</option>
                     </select> 
                 </h4>   
-                <br>
+                <br> -->
+                <input type="hidden" name="Content-Type" value="application/vnd.openxmlformats-officedocument.presentationml.presentation">
+                <input type="hidden" name="AWSAccessKeyId" value="AKIAIG4VAZKOWMM3LOZQ">
+                <input type="hidden" name="acl" value="public-read">
+                <input type="hidden" name="success_action_status" value="201">
+                <input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjoiMjAxOC0wNy0xMVQwMTo1Njo0Ni44MjFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIka2V5IiwidXBsb2Fkcy8iXSx7ImJ1Y2tldCI6InRlc3QtaHR0cC1wb3N0In0seyJhY2wiOiJwdWJsaWMtcmVhZCJ9LFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiYXBwbGljYXRpb24vdm5kLm9wZW54bWxmb3JtYXRzLW9mZmljZWRvY3VtZW50LnByZXNlbnRhdGlvbm1sLnByZXNlbnRhdGlvbiJdLHsic3VjY2Vzc19hY3Rpb25fc3RhdHVzIjoiMjAxIn1dfQ==">
+                <input type="hidden" name="signature" value="/SRFAg/UW4XDChzFfo23Y8V8e3U=">
+                <input type="hidden" name="key" value="uploads/agg.pptx">
+
 
                 <input type="button" id="loadFileXml" value="Pick a Powerpoint" onclick="document.getElementById('file').click();" /> <br>
                 <input type="file" style="display:none;" id="file" name="file"/>
-                <!-- <input type="submit" value = "Pick a Powerpoint"> -->
+                <input type="submit" id="submit" value = "Upload to S3">
             </div>
         </form> 
         
     <script> 
+
+
         console.log(document.getElementById("loadFileXml").addEventListener('click', submitter))
 
+        function set_input_attributes(variable, type, name, value) {
+            variable.setAttribute("type", type);
+            variable.setAttribute("name", name);
+            variable.setAttribute("value", value);
+        }
+
         function submitter() {
-            debugger
-            document.getElementById("form").submit(); 
+            // dynamically add to form
+            // const crypto = require('crypto');
+            // const msPerDay = 24 * 60 * 60 * 1000;
+            // const expiration = new Date(Date.now() + msPerDay).toISOString();
+
+            // const policy = {
+            // expiration,
+            // conditions: [
+            //     ['starts-with', '$key', 'uploads/'],
+            //     { bucket: 'test-http-post' },
+            //     { acl: 'public-read' },
+            //     ['starts-with', '$Content-Type', 'application/vnd.openxmlformats-officedocument.presentationml.presentation'],
+            //     { success_action_status: '201' },
+            // ],
+            // };
+
+            // const policyB64 = Buffer(JSON.stringify(policy), 'utf-8').toString('base64');
+
+            // const hmac = crypto.createHmac('sha1', 'AKIAIG4VAZKOWMM3LOZQ');
+            // hmac.update(new Buffer(policyB64, 'utf-8'));
+            // const signature = hmac.digest('base64');
+
+            var form = document.getElementById("form");
+            var destination_filename = document.createElement("input");
+
+            // var content_type = document.createElement("input");
+            // var key_id = document.createElement("input");
+            // var acl = document.createElement("input");
+            // var success_action_status = document.createElement("input");
+            // var policy = document.createElement("input");
+            // var signature = document.createElement("input");   
+
+            set_input_attributes(destination_filename, "text", "key", "uploads/testing.pptx");
+            // set_input_attributes(content_type, "hidden", "Content-Type", "application/vnd.openxmlformats-officedocument.presentationml.presentation");
+            // set_input_attributes(key_id, "hidden", "AWSAccessKeyId", "AKIAIG4VAZKOWMM3LOZQ");
+            // set_input_attributes(acl, "hidden", "acl","public-read");
+            // set_input_attributes(success_action_status, "hidden", "success_action_status","201");
+            // set_input_attributes(policy, "text", "policy",policyB64);
+            // set_input_attributes(signature, "text", "signature",signature);
+
+
+            // form.appendChild(key_id); 
+            // form.appendChild(success_action_status); 
+            // form.appendChild(policy); 
+            // form.appendChild(content_type); 
+            // form.appendChild(acl); 
+            // form.appendChild(signature); 
+            // form.appendChild(destination_filename);
+
+// <!-- 
+//             form.appendChild(content_type); 
+//             form.appendChild(key_id); 
+//             form.appendChild(acl); 
+//             form.appendChild(success_action_status); 
+//             form.appendChild(policy); 
+//             form.appendChild(signature);  -->
+            form.appendChild(destination_filename);
+
+            // form.submit(); 
         }
     
     </script>
