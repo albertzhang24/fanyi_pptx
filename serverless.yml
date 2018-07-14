@@ -69,19 +69,12 @@ functions:
       - http:
           path: home
           method: get
-  get_file:
-    handler: handler.get_file
+  translate:
+    handler: handler.translate
     events:
       - http:
-          path: getfile/post
+          path: translate
           method: post
-  uploaded_file:
-    handler: handler.uploaded_file
-    events:
-      - http:
-          path: uploaded/get
-          method: get
-
 
 plugins:
   - serverless-python-requirements
