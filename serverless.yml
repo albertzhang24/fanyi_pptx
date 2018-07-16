@@ -18,13 +18,15 @@ service: sls-translate # NOTE: update this with your service name
 # frameworkVersion: "=X.X.X"
 
 custom:
-  bucket: test-http-post
+  pythonRequirements:
+    dockerizePip: non-linux
 
 provider:
   name: aws
-  runtime: python2.7
+  timeout: 30
+  runtime: python3.6
   stage: dev
-  region: us-west-1
+  region: us-west-2
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -61,6 +63,10 @@ package:
    - serverless.yml
    - node_modules/**
    - package-lock.json
+   - tests
+   - venv
+   - uploads
+
 
 functions:
   home:
@@ -75,14 +81,10 @@ functions:
       - http:
           path: translate
           method: post
+          cors: true
 
 plugins:
   - serverless-python-requirements
-
-custom:
-  pythonRequirements:
-    dockerizePip: non-linux
-
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
