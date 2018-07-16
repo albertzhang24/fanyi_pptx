@@ -4,7 +4,7 @@ Getting Started with Translate PPTX:
 Choose a source to target language option and the powerpoint you want translated, and we will take care of the rest :)!
 ****************************************************************************************************
 Walkthrough: 
-(gif)
+<iframe src="https://giphy.com/embed/3XDUQmwUppd4NNZ1gb" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/3XDUQmwUppd4NNZ1gb">via GIPHY</a></p>
 ****************************************************************************************************
 Set Up:
 Download or clone this repo.
