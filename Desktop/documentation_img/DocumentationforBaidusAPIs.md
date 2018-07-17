@@ -51,5 +51,5 @@ by sending a GET request to Baidu's free Univeral Translation API for each text 
 ****************************************************************************************************
 ### Feedback ###
 
-Please make an issue
+Please make an issue, and we'll get back to you as soon as possible. 
 
