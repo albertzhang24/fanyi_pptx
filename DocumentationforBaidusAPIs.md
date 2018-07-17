@@ -6,15 +6,18 @@ Choose a source to target language option and the powerpoint you want translated
 #### Walkthrough: ####
 ****************************************************************************************************
 Original Powerpoint
-<iframe src="https://giphy.com/embed/fCTqxdJtFd1lKrAw3L" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/fCTqxdJtFd1lKrAw3L">via GIPHY</a></p>
+
+![original powerpoint](https://media.giphy.com/media/fCTqxdJtFd1lKrAw3L/giphy.gif)
 
 ****************************************************************************************************
 Translate it!
-<iframe src="https://giphy.com/embed/3XDUQmwUppd4NNZ1gb" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/3XDUQmwUppd4NNZ1gb">via GIPHY</a></p>
+
+![translate it](https://media.giphy.com/media/3XDUQmwUppd4NNZ1gb/giphy.gif)
 
 ****************************************************************************************************
 Translated Powerpoint:
-<iframe src="https://giphy.com/embed/1jl4ssrpu8JtgH3QX2" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/1jl4ssrpu8JtgH3QX2">via GIPHY</a></p>
+
+![translated powerpoint](https://media.giphy.com/media/1jl4ssrpu8JtgH3QX2/giphy.gif)
 
 
 ****************************************************************************************************
