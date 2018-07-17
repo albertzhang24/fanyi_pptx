@@ -31,12 +31,15 @@ You may also use the provided sample powerpoint .
 ****************************************************************************************************
 ### FAQ: ###
 **Q:** Does this work for ppt files, Microsoft Office documents, web pages and other?
+
 **A:** No, so far this only works for pptx files. However, you can use https://fanyi.baidu.com/?sid=607 for document translation. We are currently working on supporting translation for other file types as well. 
 
 **Q:** Can I set up my own source to target language options?
+
 **A:** Yes, modify our source code and create your own options in the form field of index.html under templates. 
 
 **Q:** Does this work for translating text in pictures?
+
 **A:** Not currently, but getting OCR to work for powerpoint images is next up on our to-do list.
 ****************************************************************************************************
 #### Reference Sources: ####
