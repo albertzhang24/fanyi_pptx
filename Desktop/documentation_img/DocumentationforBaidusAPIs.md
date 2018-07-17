@@ -40,6 +40,6 @@ A: Not currently, but getting OCR to work for powerpoint images is next up on ou
 ###### Language List ######
 
 ###### Error Code List ######
-![](error_codes.png "Error Codes")
+![](images/error_codes.png "Error Codes")
 
 
