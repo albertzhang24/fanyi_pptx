@@ -20,9 +20,9 @@ Translated Powerpoint:
 ****************************************************************************************************
 ### How it Works: ###
 
-Using python-pptx freeware, the python script can search each slide of a powerpoint for all of its paragraph text runs. 
-Then, the scipt's _translate function translates each the powerpoint's text content from a source to a target language 
-by sending a GET request to Baidu's free Univeral Translation API for each text run. 
+Using python-pptx freeware, the python script searches each slide of a powerpoint for all of its paragraph text runs. 
+Then, the scipt's _translate function translates each the powerpoint's text content by sending a GET request to Baidu's 
+free Univeral Translation API for each text run. 
 
 ****************************************************************************************************
 ### FAQ: ###
