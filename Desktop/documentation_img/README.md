@@ -57,12 +57,9 @@ Translated Powerpoint:
 **A:** Not currently, but getting OCR to work for powerpoint images is next up on our to-do list.
 ****************************************************************************************************
 ### Reference Sources: ###
-##### Language List #####
-![](images/language_list.png "Language List")
+[Language List](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md)
 
-
-##### Error Code List #####
-![](images/error_codes.png "Error Codes")
+[Error Codes List](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md)
 
 ****************************************************************************************************
 ### Feedback ###
