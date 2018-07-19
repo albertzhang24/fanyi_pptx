@@ -5,17 +5,8 @@
 Simple combinations of Baidu’s API’s and freeware can be very powerful. In the case of Baidu's Machine Translation API, you can translate any powerpoint between these [28 languages](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md). Just choose a source to target language option and a powerpoint, and we will take care of the rest!
 ****************************************************************************************************
 ### Walkthrough: ###
-Original Powerpoint
 
-![original powerpoint](https://media.giphy.com/media/fCTqxdJtFd1lKrAw3L/giphy.gif)
-
-Translate it!
-
-![translate it](https://media.giphy.com/media/3XDUQmwUppd4NNZ1gb/giphy.gif)
-
-Translated Powerpoint:
-
-![translated powerpoint](https://media.giphy.com/media/1jl4ssrpu8JtgH3QX2/giphy.gif)
+![original powerpoint](images/combined_gifs.gif)
 
 ****************************************************************************************************
 ### How it Works: ###
