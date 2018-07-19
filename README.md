@@ -13,7 +13,7 @@ Simple combinations of Baidu’s API’s and freeware can be very powerful. In t
 
 * Using python-pptx freeware, the python script searches each slide of a powerpoint for all of its paragraph text runs. 
 * Then, the scipt's _translate function translates the powerpoint's text content by sending a GET request to Baidu's free Univeral Translation API for each text run.  
-* With [serverless] (https://github.com/albertzhang24/documentation/blob/master/serverless_README.md) as the framework and AWS as the cloud provider, we were able to put this service on a server. 
+* With [serverless](https://github.com/albertzhang24/documentation/blob/master/serverless_README.md) as the framework and AWS as the cloud provider, we were able to put this service on a server. 
 
 ****************************************************************************************************
 ### Setup for Access ID and Secret Key: ###
