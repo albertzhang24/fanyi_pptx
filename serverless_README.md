@@ -1,15 +1,22 @@
 # Serverless in Baidu's Machine Translation API #
 
-### Serverless's Role: ### 
+### How it Works: ### 
 
-The serverless framework is used to 
+The serverless framework is combined with the AWS cloud provider to put the powerpoint translation service on a server. First, the user's selected powerpoint gets uploaded to a S3 bucket, in this case mine. Then, the submitter function takes the powerpoint and sends an URL to the serverside's translate function, where the file is stored in the user's /tmp directory and downloaded before getting translated by Baidu's Machine Translation API and sent back to the S3 bucket. Finally, the translated powerpoint is opened in a browser.  
 
 ****************************************************************************************************
-### How it Works: ###
+### Setup: ###
 
-* Using python-pptx freeware, the python script searches each slide of a powerpoint for all of its paragraph text runs. 
-* Then, the scipt's _translate function translates the powerpoint's text content by sending a GET request to Baidu's free Univeral Translation API for each text run.  
+Sign up for AWS S3 [here](https://aws.amazon.com/s3/)
 
+Create a S3 Bucket [here](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+
+Create a new identity pool [here](https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html)
+
+Update IAM roles in Cognito [here](https://docs.aws.amazon.com/cognito/latest/developerguide/iam-roles.html)
+
+CloudWatch Logs
+* Used for keeping track of requests. Learn more about them [here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html) 
 
 ****************************************************************************************************
 ### Feedback ###
