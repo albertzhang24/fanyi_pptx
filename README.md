@@ -2,7 +2,7 @@
 
 ### Getting Started with Translate PPTX: ### 
 
-Simple combinations of Baidu’s API’s and freeware can be very powerful. In the case of Baidu's Machine Translation API, you can translate any powerpoint between these 28 languages [link]. Just choose a source to target language option and a powerpoint, and we will take care of the rest!
+Simple combinations of Baidu’s API’s and freeware can be very powerful. In the case of Baidu's Machine Translation API, you can translate any powerpoint between these [28 languages](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md). Just choose a source to target language option and a powerpoint, and we will take care of the rest!
 ****************************************************************************************************
 ### Walkthrough: ###
 Original Powerpoint
@@ -57,15 +57,11 @@ Translated Powerpoint:
 **A:** Not currently, but getting OCR to work for powerpoint images is next up on our to-do list.
 ****************************************************************************************************
 ### Reference Sources: ###
-##### Language List #####
-![](images/language_list.png "Language List")
+[Language List](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md)
 
-
-##### Error Code List #####
-![](images/error_codes.png "Error Codes")
+[Error Codes List](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md)
 
 ****************************************************************************************************
 ### Feedback ###
 
 Please make an issue, and we'll get back to you as soon as possible. 
-
