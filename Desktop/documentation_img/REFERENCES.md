@@ -1,6 +1,4 @@
 ##### Error Code List #####
-![](images/error_codes.png "Error Codes")
-  
 Error Code    | Meaning       | Solution                    
 ------------- | ------------- | -------------
 52000         | Success       | None, it worked! 
