@@ -1,4 +1,4 @@
-##### Error Code List #####
+# Error Code List #
 Error Code    | Meaning       | Solution                    
 ------------- | ------------- | -------------
 52000         | Success       | None, it worked! 
