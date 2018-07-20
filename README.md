@@ -2,27 +2,18 @@
 
 ### Getting Started with Translate PPTX: ### 
 
-Simple combinations of Baidu’s API’s and freeware can be very powerful. In the case of Baidu's Machine Translation API, you can translate any powerpoint between these 28 languages [link]. Just choose a source to target language option and a powerpoint, and we will take care of the rest!
+Simple combinations of Baidu’s API’s and freeware can be very powerful. In the case of Baidu's Machine Translation API, you can translate any powerpoint between these [28 languages](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md). Just choose a source to target language option and a powerpoint, and we will take care of the rest!
 ****************************************************************************************************
 ### Walkthrough: ###
-Original Powerpoint
 
-![original powerpoint](https://media.giphy.com/media/fCTqxdJtFd1lKrAw3L/giphy.gif)
-
-Translate it!
-
-![translate it](https://media.giphy.com/media/3XDUQmwUppd4NNZ1gb/giphy.gif)
-
-Translated Powerpoint:
-
-![translated powerpoint](https://media.giphy.com/media/1jl4ssrpu8JtgH3QX2/giphy.gif)
+![original powerpoint](images/combined_gifs.gif)
 
 ****************************************************************************************************
 ### How it Works: ###
 
 * Using python-pptx freeware, the python script searches each slide of a powerpoint for all of its paragraph text runs. 
 * Then, the scipt's _translate function translates the powerpoint's text content by sending a GET request to Baidu's free Univeral Translation API for each text run.  
-
+* With [serverless](https://github.com/albertzhang24/documentation/blob/master/serverless_README.md) as the framework and AWS as the cloud provider, we were able to put this service on a server. 
 
 ****************************************************************************************************
 ### Setup for Access ID and Secret Key: ###
@@ -57,15 +48,11 @@ Translated Powerpoint:
 **A:** Not currently, but getting OCR to work for powerpoint images is next up on our to-do list.
 ****************************************************************************************************
 ### Reference Sources: ###
-##### Language List #####
-![](images/language_list.png "Language List")
+[Language List](https://github.com/albertzhang24/documentation/blob/master/language_list.md)
 
-
-##### Error Code List #####
-![](images/error_codes.png "Error Codes")
+[Error Codes List](https://github.com/albertzhang24/documentation/blob/master/error_codes.md)
 
 ****************************************************************************************************
 ### Feedback ###
 
 Please make an issue, and we'll get back to you as soon as possible. 
-
