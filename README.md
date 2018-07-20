@@ -48,7 +48,7 @@ Simple combinations of Baidu’s API’s and freeware can be very powerful. In t
 **A:** Not currently, but getting OCR to work for powerpoint images is next up on our to-do list.
 ****************************************************************************************************
 ### Reference Sources: ###
-[Language List](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md)
+[Language List](https://github.com/albertzhang24/documentation/blob/master/language_list.md)
 
 [Error Codes List](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md)
 
