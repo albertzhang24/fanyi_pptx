@@ -50,7 +50,7 @@ Simple combinations of Baidu’s API’s and freeware can be very powerful. In t
 ### Reference Sources: ###
 [Language List](https://github.com/albertzhang24/documentation/blob/master/language_list.md)
 
-[Error Codes List](https://github.com/albertzhang24/documentation/blob/master/Desktop/documentation_img/REFERENCES.md)
+[Error Codes List](https://github.com/albertzhang24/documentation/blob/master/error_codes.md)
 
 ****************************************************************************************************
 ### Feedback ###
