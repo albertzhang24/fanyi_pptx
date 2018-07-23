@@ -9,6 +9,11 @@ Simple combinations of Baidu’s API’s and freeware can be very powerful. In t
 ![original powerpoint](images/combined_gifs.gif)
 
 ****************************************************************************************************
+### An Easy Example ###
+
+Open your terminal, and run **python helloworld_translation.py** to translate "Hello World"!
+
+****************************************************************************************************
 ### How it Works: ###
 
 * Text Extraction  

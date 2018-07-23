@@ -1,10 +1,12 @@
 # GET URL: #
-http://api.fanyi.baidu.com/api/trans/vip/translate?appid=20151113000005349&q=banana&from=en&to=zh&salt=60374&sign=f452655dd6a5e80570020358ecf11f94
 
 **FORMAT**: 
 'http://api.fanyi.baidu.com/api/trans/vip/translate?appid=%s&q=%s&from=%s&to=%s&salt=%s&sign=%s' % (appid, urllib.parse.quote(q), sourceLang, targetLang, str(salt), sign)
+
+**EXAMPLE**:
+http://api.fanyi.baidu.com/api/trans/vip/translate?appid=20151113000005349&q=banana&from=en&to=zh&salt=60374&sign=f452655dd6a5e80570020358ecf11f94
     
-### Path Params ###
+## Path Params ##
 Parameter     | Type          | Defintion                   
 ------------- | ------------- | -------------
 appid         | String        | Your developer APP ID, get it from your application information in Baidu Cloud.
@@ -15,8 +17,8 @@ sourceLang   | String        | The source language of the powerpoint.
 targetLang   | String        | The target language for the translated powerpoint
 sign     | String        | The signature that is used for making the url. No user input needed. 
 
-### Returns ###
-
+## Returns ##
+Sends a GET request to the Baidu Universal Translation API, gets back the response, and prints out user's input query and the translated request query. 
 
 
 # Error Code List #
