@@ -58,7 +58,7 @@ Open your terminal, and run **python helloworld_translation.py** to translate "H
 ### Reference Sources: ###
 [Language List](https://github.com/albertzhang24/documentation/blob/master/language_list.md)
 
-[Error Codes List](https://github.com/albertzhang24/documentation/blob/master/error_codes.md)
+[Error Codes List](https://github.com/albertzhang24/documentation/blob/master/REFERENCES.md)
 
 ****************************************************************************************************
 ### Feedback ###
