@@ -39,7 +39,6 @@ def home(event, context):
 def translate(event, context):
     # We are expecting the user to send us an url.
     untranslated_pptx_url = json.loads(event['body'])['url']
-
     # Download the package and write to tmp location.
     tmp_path = os.path.join('/tmp', os.path.basename(untranslated_pptx_url))
     untranslated_pptx_response = requests.get(untranslated_pptx_url, stream=True)
@@ -51,7 +50,6 @@ def translate(event, context):
     # Translate the PPTX and upload to S3 converted bucket.
     translated_filepath = translate_powerpoint(tmp_path)
     translated_url = upload_to_s3(translated_filepath)
-    print(translated_url)
     # Return the converted S3 URL.
     return {
         'statusCode': 200,
@@ -65,16 +63,8 @@ def translate(event, context):
 
 
 def translate_powerpoint(input_filename):
-    # source_target = request.form['source_target']
     sourceLang = 'en'
     targetLang = 'zh'
-    
-    # if source_target[:source_target.find("_")] == 'en':
-    #     sourceLang = 'en'
-    #     targetLang = 'zh'
-    # else:
-    #     sourceLang = 'zh'
-    #     targetLang = 'en'
 
     source_ppt_str = input_filename
     ppt = Presentation(input_filename)
@@ -90,7 +80,6 @@ def translate_powerpoint(input_filename):
                         run.text = _translate(run.text, sourceLang, targetLang)
 
     ppt.save(target_ppt)
-
     return target_ppt
 
 

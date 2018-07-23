@@ -805,10 +805,22 @@
 
     <body>
         <h1> <center> Translate your Powerpoints </center> </h1>
+        <!-- newly added -->
+        <form method="POST" enctype="multipart/form-data" >  
+            <div class="hero">
+                <select id="lang_form" name="source_target" >
+                    <option value="default"> Choose Languages </option>
+                    <option value="en_zh">English to Mandarin</option>
+                    <option value="zh_en">Mandarin to English</option>
+                </select> 
+            </div>
+            </form> 
+
         <div class="hero">
             <input type="file" id="loadFileXml" title="Pick a Powerpoint">Pick a Powerpoint</input>
         </div>
     </body>
+
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.275.1.min.js"></script>
     <script>
 
@@ -866,6 +878,14 @@
                 ACL: 'public-read'
             }, autoSubmit);
         }
+  
+        var formLanguages = document.getElementById("lang_form");
+        var selected_lang = formLanguages.options[formLanguages.selectedIndex].value;
+        formLanguages.addEventListener('change', function() {
+            selected_lang = formLanguages.options[formLanguages.selectedIndex].value;
+            console.log(selected_lang);
+        });
+        
         var fileSelectInput = document.getElementById("loadFileXml");
         fileSelectInput.addEventListener('change', submitter);
     </script>
